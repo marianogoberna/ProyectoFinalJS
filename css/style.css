@@ -1,0 +1,33 @@
+
+*{
+    margin: 0;
+    pad: 0;
+    box-sizing: border-box;
+}
+
+main{
+    margin: 2rem;
+    display: grid;
+    grid-template-areas: "char1 char2";
+}
+
+.char1{
+    margin: 1px;
+    grid-area: "char1";
+    text-align: center;
+    height: 1.7rem;
+    border-style: solid;
+    border-color: black;
+
+}
+
+.char2{
+    margin: 1px;
+    grid-area: "char2";
+    text-align: center;
+    height: 1.7rem;
+    border-style: solid;
+    border-color: black;
+    
+
+}

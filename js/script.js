@@ -53,8 +53,14 @@ const personajes = [
 
 ];
 
+let bienvenida = alert("Bienvenido al simulador de batalla, haga click en un personaje para comenzar");
 
-var personaje1 = prompt("Ingrese el nombre del primer personaje. Las opciones son Yoda, Anakin, Palpatine, Luke, Dooku, Obi-Wan, Mace, Qui-gon");
+
+let charOne = document.getElementsByClassName("char1");  
+
+charOne.addEventListener("click", personaje1);
+
+let personaje1 = prompt("Escriba nombre del primer personaje. Las opciones son Yoda, Anakin, Palpatine, Luke, Dooku, Obi-Wan, Mace, Qui-gon");
 
 while (!personajes.find((personaje) => personaje.nombre === personaje1)){
     alert("Ingrese un nombre válido");
@@ -62,7 +68,12 @@ while (!personajes.find((personaje) => personaje.nombre === personaje1)){
 
 }
 
-var personaje2 = prompt("Ingrese el nombre del segundo personaje. Las opciones son Yoda, Anakin, Palpatine, Luke, Dooku, Obi-Wan, Mace, Qui-gon");
+let charTwo = document.getElementsByClassName("char2");
+
+charTwo.addEventListener("click", personaje2);
+
+
+let personaje2 = prompt("Ingrese el nombre del segundo personaje. Las opciones son Yoda, Anakin, Palpatine, Luke, Dooku, Obi-Wan, Mace, Qui-gon");
 
 while (!personajes.find((personaje) => personaje.nombre === personaje2)){
     alert("Ingrese un nombre válido");
@@ -75,7 +86,6 @@ fight (personaje1, personaje2);
 function fight(pj1, pj2){
     let p1 = personajes.find((personaje) => personaje.nombre === pj1);
     let p2 = personajes.find((personaje) => personaje.nombre === pj2);
-    console.log(p1);
     if (p1.midiclorians > p2.midiclorians){
         alert(`El ganador es ${p1.nombre}`);
     }
