@@ -56,30 +56,39 @@ const personajes = [
 let bienvenida = alert("Bienvenido al simulador de batalla, haga click en un personaje para comenzar");
 
 
-let charOne = document.getElementsByClassName("char1");  
+let charOne = document.getElementById("char11");  
 
-charOne.addEventListener("click", personaje1);
+charOne.addEventListener("click", elegirPersonaje1);
 
-let personaje1 = prompt("Escriba nombre del primer personaje. Las opciones son Yoda, Anakin, Palpatine, Luke, Dooku, Obi-Wan, Mace, Qui-gon");
+function elegirPersonaje1 () {
+    let personaje1 = prompt("Escriba nombre del primer personaje. Las opciones son Yoda, Anakin, Palpatine, Luke, Dooku, Obi-Wan, Mace, Qui-gon");
 
-while (!personajes.find((personaje) => personaje.nombre === personaje1)){
+    while (!personajes.find((personaje) => personaje.nombre === personaje1)){
     alert("Ingrese un nombre válido");
     personaje1 = prompt("Ingrese el nombre del primer personaje. Las opciones son Yoda, Anakin, Palpatine, Luke, Dooku, Obi-Wan, Mace, Qui-gon");
+    }
 
 }
 
-let charTwo = document.getElementsByClassName("char2");
+let charTwo = document.getElementById("char22");
 
-charTwo.addEventListener("click", personaje2);
+charTwo.addEventListener("click", elegirPersonaje2);
 
 
-let personaje2 = prompt("Ingrese el nombre del segundo personaje. Las opciones son Yoda, Anakin, Palpatine, Luke, Dooku, Obi-Wan, Mace, Qui-gon");
+function elegirPersonaje2 () {
+    let personaje2 = prompt("Ingrese el nombre del segundo personaje. Las opciones son Yoda, Anakin, Palpatine, Luke, Dooku, Obi-Wan, Mace, Qui-gon");
 
-while (!personajes.find((personaje) => personaje.nombre === personaje2)){
+    while (!personajes.find((personaje) => personaje.nombre === personaje2)){
     alert("Ingrese un nombre válido");
     personaje2 = prompt("Ingrese el nombre del segundo personaje. Las opciones son Yoda, Anakin, Palpatine, Luke, Dooku, Obi-Wan, Mace, Qui-gon");
+}
+
 
 }
+
+let resultado = document.getElementById("result");
+
+resultado.addEventListener("click", fight);
 
 fight (personaje1, personaje2);
 

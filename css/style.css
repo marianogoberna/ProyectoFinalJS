@@ -8,7 +8,8 @@
 main{
     margin: 2rem;
     display: grid;
-    grid-template-areas: "char1 char2";
+    grid-template-areas: "char1 char2"
+                         "result result"   ;
 }
 
 .char1{
@@ -29,5 +30,15 @@ main{
     border-style: solid;
     border-color: black;
     
+
+}
+
+.result{
+    margin: 1px;
+    grid-area: "result";
+    text-align: center;
+    height: 1.7rem;
+    border-style: solid;
+    border-color: black;
 
 }
